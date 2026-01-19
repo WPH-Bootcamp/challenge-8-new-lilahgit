@@ -7,7 +7,7 @@ const Footer = () => (
         aria-label='Go to home'
       >
         <img
-          src='./Logo.svg'
+          src='/Logo.svg'
           alt='Movie Explorer'
           className='w-129.11px'
         />
@@ -18,3 +18,4 @@ const Footer = () => (
 );
 
 export default Footer;
+

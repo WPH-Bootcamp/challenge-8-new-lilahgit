@@ -48,7 +48,7 @@ const MovieCard = ({
         <p className='line-clamp-2 text-lg font-semibold text-white'>{movie.title}</p>
         <div className='mt-1 flex items-center gap-1 text-md text-slate-400'>
           <img
-            src='./Star.svg'
+            src='/Star.svg'
             alt='Rating'
             className='h-5 w-5'
           />
@@ -62,7 +62,7 @@ const MovieCard = ({
           className='absolute right-3 top-3 flex h-9 w-9 items-center justify-center rounded-full bg-black/50 backdrop-blur'
         >
           <img
-            src={isFavorite ? './Heart-1.svg' : './Heart.svg'}
+            src={isFavorite ? '/Heart-1.svg' : '/Heart.svg'}
             alt='Favorite'
             className='h-4 w-4'
           />
@@ -73,3 +73,4 @@ const MovieCard = ({
 };
 
 export default MovieCard;
+

@@ -17,13 +17,13 @@ const FavoritesPage = () => {
 
         {favorites.length === 0 ? (
           <EmptyState
-            icon='./data-empty.svg'
+            icon='/data-empty.svg'
             title='Data Empty'
-            description='You do not have any favorite movie yet'
+            description='You dont have any favorite movie yet'
             action={
               <Link
                 to='/'
-                className='flex items-center mt-3 rounded-full bg-[#961200] px-11 py-2.75 text-md font-semibold text-white shadow-[0_12px_30px_-18px_rgba(176,30,16,0.9)] min-h-13'
+                className='flex items-center mt-3 rounded-full bg-[#961200] px-12 py-2.75 text-md font-semibold text-white min-h-13'
               >
                 Explore Movie
               </Link>
@@ -34,64 +34,91 @@ const FavoritesPage = () => {
             {favorites.map((movie) => (
               <div
                 key={movie.id}
-                className='flex flex-col gap-2 md:gap-6 border-b border-neutral-800 pb-12 sm:flex-row'
+                className='flex flex-col gap-4 border-b border-neutral-800 pb-10 md:flex-row md:gap-6'
               >
-                <Link
-                  to={`/detail/${movie.id}`}
-                  className='flex h-67.5 w-45.5 shrink-0 overflow-hidden rounded-2xl bg-white/5'
-                >
-                  {movie.poster_path ? (
-                    <img
-                      src={getImageUrl(movie.poster_path, 'w342')}
-                      alt={movie.title}
-                      className='h-full w-full object-cover'
-                    />
-                  ) : (
-                    <div className='flex h-full w-full items-center justify-center text-xs text-slate-400'>
-                      No Poster
-                    </div>
-                  )}
-                </Link>
-                <div className='flex-1 space-y-2'>
-                  <div className='flex items-center justify-between'>
-                    <div>
-                      <p className='display-xs font-semibold text-white'>{movie.title}</p>
-                      <div className='mt-1 flex items-center gap-2 text-lg text-slate-400'>
+                <div className='flex items-start gap-4 md:gap-6'>
+                  <Link
+                    to={`/detail/${movie.id}`}
+                    className='flex h-39 md:h-67.5 w-26 md:w-45.5 shrink-0 overflow-hidden rounded-2xl bg-white/5'
+                  >
+                    {movie.poster_path ? (
+                      <img
+                        src={getImageUrl(movie.poster_path, 'w342')}
+                        alt={movie.title}
+                        className='h-full w-full object-cover'
+                      />
+                    ) : (
+                      <div className='flex h-full w-full items-center justify-center text-xs text-slate-400'>
+                        No Poster
+                      </div>
+                    )}
+                  </Link>
+                  <div className='flex-1 space-y-2'>
+                    <div className='flex items-start justify-between gap-3'>
+                      <div>
+                        <p className='text-lg font-semibold text-white md:display-xs'>
+                          {movie.title}
+                        </p>
+                        <div className='mt-1 flex items-center gap-2 text-sm text-neutral-400 md:text-lg'>
+                          <img
+                            src='/Star.svg'
+                            alt='Rating'
+                            className='h-4 w-4 md:h-6 md:w-6'
+                          />
+                          <span>{movie.vote_average.toFixed(1)}/10</span>
+                        </div>
+                      </div>
+                      <button
+                        type='button'
+                        onClick={() => toggleFavorite(movie)}
+                        className='hidden h-14 w-14 items-center justify-center rounded-full border border-white/10 bg-white/5 md:flex'
+                      >
                         <img
-                          src='./Star.svg'
-                          alt='Rating'
+                          src='/Heart-red.svg'
+                          alt='Remove'
                           className='h-6 w-6'
                         />
-                        <span>{movie.vote_average.toFixed(1)}/10</span>
-                      </div>
+                      </button>
                     </div>
-                    <button
-                      type='button'
-                      onClick={() => toggleFavorite(movie)}
-                      className='flex h-14 w-14 items-center justify-center rounded-full border border-white/10 bg-white/5'
-                    >
-                      <img
-                        src='./Heart-red.svg'
-                        alt='Remove'
-                        className='h-6 w-6'
-                      />
-                    </button>
-                  </div>
-                  <p className='text-md max-w-200 text-slate-400 line-clamp-2 mb-6'>{movie.overview}</p>
-                  <div>
+                    <p className='max-w-80 text-md text-neutral-400 line-clamp-2 md:text-md md:max-w-250'>
+                      {movie.overview}
+                    </p>
                     <Link
                       to={`/detail/${movie.id}`}
-                      className='inline-flex items-center gap-2 w-50 h-13 rounded-full bg-[#961200] px-7 py-3 text-md font-semibold text-white'
+                      className='hidden items-center gap-2 rounded-full bg-[#961200] px-7 py-3 mt-6 text-md font-semibold text-white md:inline-flex md:w-50'
                     >
                       Watch Trailer
                       <img
-                        src='./Play.svg'
+                        src='/Play.svg'
                         alt='Play'
                         className='h-5 w-5'
                       />
-                    
                     </Link>
                   </div>
+                </div>
+                <div className='flex items-center gap-3 md:hidden'>
+                  <Link
+                    to={`/detail/${movie.id}`}
+                    className='flex h-12 flex-1 items-center justify-center gap-2 rounded-full bg-[#961200] px-7 text-sm font-semibold text-white'
+                  >
+                    Watch Trailer
+                    <img
+                      src='/Play.svg'
+                      alt='Play'
+                      className='h-4 w-4'
+                    />
+                  </Link>
+                  <button
+                    type='button'
+                    onClick={() => toggleFavorite(movie)}
+                    className='flex h-12 w-12 items-center justify-center rounded-full border border-white/10 bg-white/5'
+                  >
+                    <img
+                      src='/Heart-red.svg'
+                      alt='Remove'
+                      className='h-5 w-5'
+                    />
+                  </button>
                 </div>
               </div>
             ))}
@@ -107,3 +134,4 @@ const FavoritesPage = () => {
 };
 
 export default FavoritesPage;
+
