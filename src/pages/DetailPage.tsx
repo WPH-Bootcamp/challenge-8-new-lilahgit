@@ -69,7 +69,7 @@ const DetailPage = () => {
             <div className='flex flex-wrap items-center gap-2 text-sm text-white'>
               <span className='flex items-center gap-2'>
                 <img
-                  src='./Calendar.svg'
+                  src='/Calendar.svg'
                   alt='Calendar Icon'
                   className='h-6 w-6'
                 />
@@ -83,7 +83,7 @@ const DetailPage = () => {
               >
               Watch Trailer
                 <img
-                  src='./Play.svg'
+                  src='/Play.svg'
                   alt='Play'
                   className='h-4 w-4'
                 />
@@ -104,7 +104,7 @@ const DetailPage = () => {
                   className='flex h-12 w-12 items-center justify-center rounded-full border border-white/10 bg-white/5 sm:h-13 sm:w-13'
                 >
                   <img
-                    src={isFavorite(movie?.id ?? 0) ? './Heart-red.svg' : './Heart.svg'}
+                    src={isFavorite(movie?.id ?? 0) ? '/Heart-red.svg' : '/Heart.svg'}
                     alt='Favorite'
                     className='h-6 w-6 items-center'
                   />
@@ -114,17 +114,17 @@ const DetailPage = () => {
 
             <div className='mt-4 grid grid-cols-3 gap-2 sm:flex sm:flex-wrap sm:gap-5'>
               <InfoBadge
-                icon='./Star.svg'
+                icon='/Star.svg'
                 label='Rating'
                 value={movie ? `${movie.vote_average.toFixed(1)}/10` : '--'}
               />
               <InfoBadge
-                icon='./Video.svg'
+                icon='/Video.svg'
                 label='Genre'
                 value={genre ?? '--'}
               />
               <InfoBadge
-                icon='./emoji-happy.svg'
+                icon='/emoji-happy.svg'
                 label='Age Limit'
                 value={movie ? (movie.adult ? '18+' : '13+') : '--'}
               />

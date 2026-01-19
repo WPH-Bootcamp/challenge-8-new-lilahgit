@@ -50,7 +50,7 @@ const HomePage = () => {
             >
               Watch Trailer
               <img
-                src='./Play.svg'
+                src='/Play.svg'
                 alt='Play'
                 className='h-4 w-4'
               />
@@ -91,7 +91,7 @@ const HomePage = () => {
               aria-label='Scroll trending'
             >
               <img
-                src='./Arrow.svg'
+                src='/Arrow.svg'
                 alt='Scroll'
                 className='h-6 w-11 rotate-90'
               />
@@ -142,3 +142,4 @@ const HomePage = () => {
 };
 
 export default HomePage;
+

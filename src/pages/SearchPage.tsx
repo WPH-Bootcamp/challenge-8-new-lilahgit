@@ -43,11 +43,11 @@ const SearchPage = () => {
             className="flex h-6 w-6 items-center justify-center"
             aria-label="Back"
           >
-            <img src="./Arrow-1.svg" alt="Back" className="h-6 w-6" />
+            <img src="/Arrow-1.svg" alt="Back" className="h-6 w-6" />
           </button>
           <div className="relative">
             <img
-              src="./Search.svg"
+              src="/Search.svg"
               alt="Search"
               className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 opacity-70"
             />
@@ -69,7 +69,7 @@ const SearchPage = () => {
                 className="absolute right-3 top-1/2 flex h-5 w-5 -translate-y-1/2 items-center justify-center rounded-full bg-white/10"
                 aria-label="Clear search"
               >
-                <img src="./Close.svg" alt="Clear" className="h-3 w-3" />
+                <img src="/Close.svg" alt="Clear" className="h-3 w-3" />
               </button>
             )}
           </div>
@@ -83,7 +83,7 @@ const SearchPage = () => {
               <div className="flex min-h-90 flex-col items-center justify-center gap-3 text-center my-25">
                 <div className="flex h-50 w-50 items-center justify-center">
                   <img
-                    src="./data-empty.svg"
+                    src="/data-empty.svg"
                     alt="Data Not Found"
                     className="h-50 w-50"
                   />
@@ -100,7 +100,7 @@ const SearchPage = () => {
             </div>
             <div className="hidden md:block">
               <EmptyState
-                icon="./data-empty.svg"
+                icon="/data-empty.svg"
                 title="Data Not Found"
                 description="Try other keywords"
               />
@@ -139,7 +139,7 @@ const SearchPage = () => {
                         </Link>
                         <div className="flex items-center gap-2 text-sm text-slate-400">
                           <img
-                            src="./Star.svg"
+                            src="/Star.svg"
                             alt="Rating"
                             className="h-4 w-4"
                           />
@@ -156,7 +156,7 @@ const SearchPage = () => {
                         className="flex h-11 w-100 items-center justify-center gap-2 rounded-full bg-[#961200] text-sm font-semibold text-white"
                       >
                         Watch Trailer
-                        <img src="./Play.svg" alt="Play" className="h-4 w-4" />
+                        <img src="/Play.svg" alt="Play" className="h-4 w-4" />
                       </Link>
                       <button
                         type="button"
@@ -167,8 +167,8 @@ const SearchPage = () => {
                         <img
                           src={
                             isFavorite(movie.id)
-                              ? "./Heart-red.svg"
-                              : "./Heart.svg"
+                              ? "/Heart-red.svg"
+                              : "/Heart.svg"
                           }
                           alt="Favorite"
                           className="h-5 w-5"
@@ -211,7 +211,7 @@ const SearchPage = () => {
                           </Link>
                           <div className="flex items-center gap-2 text-sm text-slate-400">
                             <img
-                              src="./Star.svg"
+                              src="/Star.svg"
                               alt="Rating"
                               className="h-4 w-4"
                             />
@@ -230,8 +230,8 @@ const SearchPage = () => {
                           <img
                             src={
                               isFavorite(movie.id)
-                                ? "./Heart-red.svg"
-                                : "./Heart.svg"
+                                ? "/Heart-red.svg"
+                                : "/Heart.svg"
                             }
                             alt="Favorite"
                             className="h-5 w-5"
@@ -244,7 +244,7 @@ const SearchPage = () => {
                           className="flex h-13 w-50 items-center justify-center gap-2 rounded-full bg-[#961200] text-sm font-semibold text-white"
                         >
                           Watch Trailer
-                          <img src="./Play.svg" alt="Play" className="h-4 w-4" />
+                          <img src="/Play.svg" alt="Play" className="h-4 w-4" />
                         </Link>
                       </div>
                     </div>
@@ -262,3 +262,4 @@ const SearchPage = () => {
 };
 
 export default SearchPage;
+

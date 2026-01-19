@@ -57,7 +57,7 @@ const Header = ({ variant = 'solid', showSearch = true }: HeaderProps) => {
             aria-label='Go to home'
           >
             <img
-              src='./Logo.svg'
+              src='/Logo.svg'
               alt='Movie Explorer'
               className='w-23 md:w-[129.11px]'
             />
@@ -82,7 +82,7 @@ const Header = ({ variant = 'solid', showSearch = true }: HeaderProps) => {
             {showSearch && (
               <div className='relative hidden items-center md:flex'>
                 <img
-                  src='./Search.svg'
+                  src='/Search.svg'
                   alt='Search'
                   className='pointer-events-none absolute left-3 h-4 w-4 opacity-70'
                 />
@@ -105,7 +105,7 @@ const Header = ({ variant = 'solid', showSearch = true }: HeaderProps) => {
                     aria-label='Clear search'
                   >
                     <img
-                      src='./Close.svg'
+                      src='/Close.svg'
                       alt='Clear'
                       className='h-3 w-3'
                     />
@@ -120,7 +120,7 @@ const Header = ({ variant = 'solid', showSearch = true }: HeaderProps) => {
               aria-label='Search'
             >
               <img
-                src='./Search.svg'
+                src='/Search.svg'
                 alt='Search'
                 className='h-6 w-6'
               />
@@ -132,7 +132,7 @@ const Header = ({ variant = 'solid', showSearch = true }: HeaderProps) => {
               aria-label='Open menu'
             >
               <img
-                src='./Menu.svg'
+                src='/Menu.svg'
                 alt='Menu'
                 className='h-6 w-6'
               />
@@ -153,7 +153,7 @@ const Header = ({ variant = 'solid', showSearch = true }: HeaderProps) => {
             aria-label='Go to home'
           >
             <img
-              src='./Logo.svg'
+              src='/Logo.svg'
               alt='Movie Explorer'
               className='w-129.11px'
             />
@@ -165,7 +165,7 @@ const Header = ({ variant = 'solid', showSearch = true }: HeaderProps) => {
             aria-label='Close menu'
           >
             <img
-              src='./Close.svg'
+              src='/Close.svg'
               alt='Close'
               className='h-6 w-6'
             />
@@ -193,3 +193,4 @@ const Header = ({ variant = 'solid', showSearch = true }: HeaderProps) => {
 };
 
 export default Header;
+
